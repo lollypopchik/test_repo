@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import argparse
+import io 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
@@ -8,9 +9,9 @@ if __name__ == '__main__':
     parser.add_argument('divisor', type=float, help='Divisor')
     
     args = parser.parse_args()
-try:
- print(args.numerator / args.divisor)
-except:
- print('Bad division')
 
+    try:
+        print(args.numerator / args.divisor)
+    except:
+        raise io.RumTimeError
 
