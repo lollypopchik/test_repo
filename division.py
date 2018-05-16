@@ -8,9 +8,5 @@ if __name__ == '__main__':
     parser.add_argument('divisor', type=float, help='Divisor')
     
     args = parser.parse_args()
-try:
+
  print(args.numerator / args.divisor)
-except:
- print('Bad division')
-
-
